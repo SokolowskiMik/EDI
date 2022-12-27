@@ -23,4 +23,3 @@ async function getData() {
   }
 }
 
-// call the getData function
