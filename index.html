@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/c2e5f11c19.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="page-wrapper">
@@ -14,9 +15,9 @@
 
         <nav id="nav-bar">
           <ul>
-            <li><a class="nav-link" href="#">Dominik Graczek</a></li>
-            <li><a class="nav-link" href="#">Filip Dzięgło</a></li>
-            <li><a class="nav-link" href="#">Mikołaj Sokołowski</a></li>
+            <li><a class="nav-link" href="https://github.com/DominikGraczek">Dominik Graczek</a></li>
+            <li><a class="nav-link" href="https://github.com/anoniarz">Filip Dzięgło</a></li>
+            <li><a class="nav-link" href="https://github.com/SokolowskiMik">Mikołaj Sokołowski</a></li>
           </ul>
         </nav>
       </header>
@@ -24,7 +25,7 @@
       <div class="container"></div>
 
       <section id="hero">
-        <h2>Handcrafted, home-made masterpieces</h2>
+        <h2>Mocaroo API</h2>
         <form id="form" action="https://www.freecodecamp.com/email-submit">
           <input
             name="email"
@@ -36,7 +37,13 @@
           <input id="submit" type="submit" value="Get Started" class="btn" />
         </form>
       </section>
-
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" 
+             role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+      <div id="api1">
+        <table id="zawodnicy"></table>
+      </div>
       <div class="container">
         <section id="pricing">
           <div class="product" id="tenor">
