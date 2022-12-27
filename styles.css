@@ -146,6 +146,17 @@ nav>ul {
     }
 }
 
+table {
+    margin-top: 10px;
+    background-color: var(--bg-2);
+    border-color: var(--bg-1);
+    color: var(--font-1);
+}
+
+.mt-3 {
+    margin: 10px;
+}
+
 #hero {
     background-color: #6c757d;
     display: flex;
