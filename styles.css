@@ -3,12 +3,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 7px;
 }
 
 :root {
     --font-1: #f8f9fa;
     --font-2: #ced4da;
     --font-3: #6c757d;
+    --bg-1: #495057;
+    --bg-2: #6c757d;
 }
 
 body {
@@ -68,7 +71,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #495057;
+    background-color: var(--bg-1);
     border-radius: 7px;
 }
 
@@ -239,6 +242,7 @@ nav>ul {
 }
 
 #pricing {
+    background-color: var(--bg-2);
     margin-top: 60px;
     display: flex;
     flex-direction: row;
@@ -303,7 +307,8 @@ nav>ul {
 
 footer {
     margin-top: 30px;
-    background-color: #444;
+    background-color: var(--bg-1);
+    color: var(--font-1);
     padding: 20px;
     border-radius: 7px;
 }
@@ -322,5 +327,4 @@ footer>span {
     display: flex;
     justify-content: flex-end;
     font-size: 0.9em;
-    color: #444;
 }
