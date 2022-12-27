@@ -6,8 +6,13 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
-    background-blend-mode: multiply, multiply;
+    background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
+    background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
+    background: -ms-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -ms-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
+    background: -o-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -o-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
+    background: radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
+    background-size: 20px 20px;
+    background-color: #444;
     font-family: 'Lato', sans-serif;
 }
 
@@ -56,7 +61,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #eee;
+    background-color: #444;
 }
 
 @media (max-width: 600px) {
@@ -127,13 +132,17 @@ nav>ul {
 }
 
 #hero {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 200px;
-    margin-top: 50px;
+    margin: auto;
+    margin-top: 80px;
+    width: 50%;
+    border-radius: 7px;
 }
 
 #hero>h2 {
