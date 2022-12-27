@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/c2e5f11c19.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="page-wrapper">
@@ -36,7 +37,13 @@
           <input id="submit" type="submit" value="Get Started" class="btn" />
         </form>
       </section>
-
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" 
+             role="status" id="loading">
+            <span class="sr-only">Loading...</span>
+      <div id="api1">
+        <table id="zawodnicy"></table>
+      </div>
       <div class="container">
         <section id="pricing">
           <div class="product" id="tenor">
