@@ -7,11 +7,11 @@ async function getData() {
     const data = await response.json();
 
     // create an HTML table
-    let table = '<table><tr><th>ID</th><th>Name</th></tr>';
+    let table = '<table><tr><th>Ranking</th><th>Imie</th><th>Nazwisko</th><th>Plec</th><th>Pochodzenie</th><th>Wiek</th><th>Pseudonim</th><th>Wygrane partie</th><th>Przegrane partie</th></tr>';
     
     // loop through the data and add rows to the table
     for (let item of data) {
-      table += `<tr><td>${item.id}</td><td>${item.name}</td></tr>`;
+      table += `<tr><td>${item.ranking}</td><td>${item.imie}</td><td>${item.nazwisko}</td><td>${item.plec}</td><td>${item.pochodzenie}</td><td>${item.wiek}</td><td>${item.pseudonim}</td><td>${item.wygrane_partie}</td><td>${item.przegrane_partie}</td></tr>`;
     }
     table += '</table>';
 
@@ -24,4 +24,3 @@ async function getData() {
 }
 
 // call the getData function
-getData();
