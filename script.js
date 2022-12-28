@@ -27,6 +27,7 @@ async function getData(x) {
 }
 
 
+
 async function getData2() {
     const response = await fetch(apiUrl);
     console.log(response);
@@ -42,6 +43,7 @@ async function getData2() {
         values.push(data[i].ranking);
     }
     new Chart(document.getElementById("bar-chart"), {
+        
         type: 'bar',
         data: {
             labels: labels,
@@ -59,5 +61,34 @@ async function getData2() {
             }
         }
     });
+
+}
+
+async function getData3() {
+  const response = await fetch(apiUrl);
+  console.log(response);
+  const data = await response.json();
+  console.log(data);
+  length = data.length;
+  console.log(length);
+
+  labels = [];
+  values = [];
+  for (i = 0; i < length; i++) {
+      labels.push(data[i].imie);
+      values.push(data[i].wiek);
+  }
+  new Chart(document.getElementById("line-chart"), {
+      
+      type: 'line',
+      data: {
+          labels: labels,
+          datasets: [{
+              label: "wiek",
+              backgroundColor: "whitesmoke",
+              data: values
+          }]
+      },
+  });
 
 }
