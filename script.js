@@ -25,3 +25,39 @@ async function getData(x) {
 
     }
 }
+
+
+async function getData2() {
+    const response = await fetch(apiUrl);
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
+    length = data.length;
+    console.log(length);
+
+    labels = [];
+    values = [];
+    for (i = 0; i < length; i++) {
+        labels.push(data[i].imie);
+        values.push(data[i].ranking);
+    }
+    new Chart(document.getElementById("bar-chart"), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "ranking",
+                backgroundColor: "whitesmoke",
+                data: values
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: 'ranking graczy'
+            }
+        }
+    });
+
+}

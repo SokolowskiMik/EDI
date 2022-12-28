@@ -39,65 +39,19 @@
         
       </section>
 
-      <table class="table table-bordered table-dark table-style" id="zawodnicy" display="none">
+      <table class="table table-bordered table-dark" id="zawodnicy" display="none">
       </table>
 
       <section id="hero">
         <h2>DATA CHARTS</h2>
+        <div class="chart">
+          <button class="btn btn-secondary" id="show-table" onclick="getData2()">Show Chart</button>
+        </div>
         
+
         <canvas id="bar-chart" width="800" height="450">
         </canvas>
-        <script>
-      
-            getData();
-      
-            async function getData() {
-                const response = await fetch(
-    'https://my.api.mockaroo.com/yenga.json?key=25ccbe90');
-                console.log(response);
-                const data = await response.json();
-                console.log(data);
-                length = data.length;
-                console.log(length);
-      
-                labels = [];
-                values = [];
-                for (i = 0; i < length; i++) {
-                    labels.push(data[i].pseudonim);
-                    values.push(data[i].ranking);
-                }
-      
-      
-                new Chart(document.getElementById("bar-chart"), {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [
-                            {
-                                label: "ranking",
-                                backgroundColor: ["#3e95cd",
-                                                  "#8e5ea2", 
-                                                  "#3cba9f", 
-                                                  "#e8c3b9", 
-                                                  "#c45850",
-                                                  "#CD5C5C", 
-                                                  "#40E0D0"],
-                                data: values
-                            }
-                        ]
-                    },
-                    options: {
-                        legend: { display: false },
-                        title: {
-                            display: true,
-                            text: 'ranking graczy'
-                        }
-                    }
-                });
-      
-            }
-      
-        </script>
+
       </section>
 
       <div class="container">
