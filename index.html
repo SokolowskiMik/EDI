@@ -30,14 +30,15 @@
         <h2>Mocaroo API</h2>
         <div class="container mt-3">
           <!-- add a button to trigger the table display -->
-          <button class="btn btn-primary" id="show-table" onclick="getData()">Show Table</button>
+          <button class="btn btn-secondary" id="show-table" onclick="getData(0)">Show 5+</button>
+          <button class="btn btn-secondary" id="show-table" onclick="getData(100)">Show all</button>
         </div>
+        
       </section>
-      <table class="table table-bordered" id="zawodnicy" display="none">
-        <!-- table structure and data go here -->
+
+      <table class="table table-bordered table-dark table-style" id="zawodnicy" display="none">
       </table>
 
-      <!-- chart section -->
       <section id="hero">
         <h2>DATA CHARTS</h2>
         <div>

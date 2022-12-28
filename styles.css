@@ -46,6 +46,7 @@ a {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .btn {
@@ -133,11 +134,26 @@ nav>ul {
     }
 }
 
-table {
-    margin-top: 10px;
+.t-container {
+    left: 20px;
+    right: 20px;
+}
+
+.table {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
     background-color: var(--bg-2);
     border-color: var(--bg-1);
     color: var(--font-1);
+}
+
+.table-style {
+    color: var(--font-1);
+    background-color: var(--bg-2);
+    border-radius: 7px;
+    left: 5px;
+    right: 5px;
 }
 
 .mt-3 {
@@ -156,6 +172,10 @@ table {
     margin-top: 130px;
     width: 50%;
     border-radius: 7px;
+}
+
+.hero-2 {
+    margin-top: 60px;
 }
 
 #hero>h2 {
