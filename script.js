@@ -60,15 +60,15 @@ async function getData2() {
     labels = [];
     values = [];
     for (i = 0; i < length; i++) {
-        labels.push(data[i].imie);
-        values.push(data[i].ranking);
+        labels.push(data[i].pseudonim);
+        values.push(data[i].wygrane_partie);
     }
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
             labels: labels,
             datasets: [{
-                label: "ranking",
+                label: "wygrane partie",
                 backgroundColor: randomColor,
                 data: values,
                 borderColor: "black",
@@ -88,9 +88,9 @@ async function getData2() {
             },
             title: {
                 display: true,
-                text: 'ranking graczy',
+                text: 'Wygrane Partie',
                 fontColor: "white",
-                size: 20
+
             }
         }
     });
