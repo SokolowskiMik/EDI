@@ -3,7 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 7px;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
 }
 
 :root {
@@ -40,6 +41,11 @@ i {
 a {
     color: inherit;
     text-decoration: none;
+    padding: 20px;
+}
+
+a:hover {
+    color: var(--font-3);
 }
 
 .container {
@@ -57,7 +63,6 @@ a {
     text-transform: uppercase;
     border: 3px var(--bg-1) solid;
     color: var(--font-2);
-    border-radius: 7px;
     background: transparent;
     cursor: pointer;
 }
@@ -69,8 +74,8 @@ a {
 header {
     position: fixed;
     top: 0;
-    right: 0;
-    left: 0;
+    right: 5px;
+    left: 5px;
     color: var(--font-1);
     min-height: 75px;
     padding: 0px 20px;
@@ -78,7 +83,6 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: var(--bg-1);
-    border-radius: 7px;
 }
 
 @media (max-width: 600px) {
@@ -152,7 +156,6 @@ nav>ul {
 .table-style {
     color: var(--font-1);
     background-color: var(--bg-2);
-    border-radius: 7px;
     left: 5px;
     right: 5px;
 }
@@ -161,8 +164,13 @@ nav>ul {
     margin: 10px;
 }
 
+h2 {
+    margin-top: 10px;
+    color: var(--font-2);
+}
+
 #hero {
-    background-color: #6c757d;
+    background-color: var(--bg-2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,11 +179,10 @@ nav>ul {
     margin: auto;
     margin-top: 130px;
     width: 50%;
-    border-radius: 7px;
 }
 
 #hero2 {
-    background-color: #6c757d;
+    background-color: var(--bg-2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +191,6 @@ nav>ul {
     margin: auto;
     margin-top: 60px;
     width: 50%;
-    border-radius: 7px;
 }
 
 .hero-2 {

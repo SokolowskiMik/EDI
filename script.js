@@ -71,19 +71,26 @@ async function getData2() {
                 label: "ranking",
                 backgroundColor: randomColor,
                 data: values,
+                borderColor: "black",
+                borderWidth: 1
             }]
         },
         options: {
+
+            layout: { padding: 10 },
             legend: {
                 display: false,
                 labels: {
-                    fontColor: "white"
+                    font: {
+                        fontColor: "white"
+                    }
                 }
             },
             title: {
                 display: true,
                 text: 'ranking graczy',
-                fontColor: "white"
+                fontColor: "white",
+                size: 20
             }
         }
     });
@@ -104,6 +111,11 @@ async function getData3() {
         values.push(data[i].wiek);
     }
     new Chart(document.getElementById("line-chart"), {
+
+
+        options: {
+            layout: { padding: 10 },
+        },
 
         type: 'line',
         data: {
