@@ -30,7 +30,26 @@ async function no_elements() {
     getData(number);
 }
 
+let colors = [
+    "#22223B",
+    "#4A4E69",
+    "#9A8C98",
+    "#C9ADA7",
+    "#F2E9E4"
+]
+
+let randomColor = []
+
+for (let i = 0; i < 100; i++) {
+    let index = Math.floor(Math.random() * colors.length);
+    randomColor.push(colors[index])
+}
+
+
 async function getData2() {
+
+
+
     const response = await fetch(apiUrl);
     console.log(response);
     const data = await response.json();
@@ -50,7 +69,7 @@ async function getData2() {
             labels: labels,
             datasets: [{
                 label: "ranking",
-                backgroundColor: "whitesmoke",
+                backgroundColor: randomColor,
                 data: values,
             }]
         },
@@ -91,7 +110,7 @@ async function getData3() {
             labels: labels,
             datasets: [{
                 label: "wiek",
-                backgroundColor: "whitesmoke",
+                backgroundColor: "#4A4E69",
                 data: values
 
             }]

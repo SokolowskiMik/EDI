@@ -55,8 +55,9 @@ a {
     font-size: 1em;
     font-weight: 900;
     text-transform: uppercase;
-    border: 3px black solid;
-    border-radius: 2px;
+    border: 3px var(--bg-1) solid;
+    color: var(--font-2);
+    border-radius: 7px;
     background: transparent;
     cursor: pointer;
 }
