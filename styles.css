@@ -145,6 +145,7 @@ nav>ul {
 }
 
 .table {
+    text-align: center;
     width: 90%;
     margin: auto;
     margin-top: 60px;
