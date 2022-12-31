@@ -1,29 +1,9 @@
 const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
 // const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=25ccbe90';
 
-async function getData(x) {
-
-    const response = await fetch(apiUrl);
-    console.log(response)
-    const data = await response.json();
-
-    let table = '<table><tr><th>Ranking</th><th>Imie</th><th>Nazwisko</th><th>Plec</th><th>Pochodzenie</th><th>Wiek</th><th>Pseudonim</th><th>Wygrane partie</th><th>Przegrane partie</th></tr>';
-
-    for (let i = 0; i < x; i++) {
-        const item = data[i];
-        if (item) {
-            table += `<tr><td>${item.ranking}</td><td>${item.imie}</td><td>${item.nazwisko}</td><td>${item.plec}</td><td>${item.pochodzenie}</td><td>${item.wiek}</td><td>${item.pseudonim}</td><td>${item.wygrane_partie}</td><td>${item.przegrane_partie}</td></tr>`;
-        }
-    }
-
-    table += '</table>';
-
-    document.getElementById('zawodnicy').innerHTML = table
-
-}
 
 async function no_elements() {
-    let number = parseInt(prompt("How many elements:"));
+    let number = parseInt(prompt("How many results:"));
     getData(number);
 }
 
@@ -42,21 +22,29 @@ for (let i = 0; i < 100; i++) {
     randomColor.push(colors[index])
 }
 
-
-async function getData2() {
-
-
+async function getData(x) {
 
     const response = await fetch(apiUrl);
-    console.log(response);
     const data = await response.json();
-    console.log(data);
+
+    let table = '<table><tr><th>Ranking</th><th>Imie</th><th>Nazwisko</th><th>Plec</th><th>Pochodzenie</th><th>Wiek</th><th>Pseudonim</th><th>Wygrane partie</th><th>Przegrane partie</th></tr>';
+
+    for (let i = 0; i < x; i++) {
+        const item = data[i];
+        if (item) {
+            table += `<tr><td>${item.ranking}</td><td>${item.imie}</td><td>${item.nazwisko}</td><td>${item.plec}</td><td>${item.pochodzenie}</td><td>${item.wiek}</td><td>${item.pseudonim}</td><td>${item.wygrane_partie}</td><td>${item.przegrane_partie}</td></tr>`;
+        }
+    }
+
+    table += '</table>';
+
+    document.getElementById('zawodnicy').innerHTML = table
+
     length = data.length;
-    console.log(length);
 
     labels = [];
     values = [];
-    for (i = 0; i < length; i++) {
+    for (i = 0; i < x; i++) {
         labels.push(data[i].pseudonim);
         values.push(data[i].wygrane_partie);
     }
@@ -91,21 +79,13 @@ async function getData2() {
             }
         }
     });
-}
 
-async function getData3() {
-    const response = await fetch(apiUrl);
-    console.log(response);
-    const data = await response.json();
-    console.log(data);
-    length = data.length;
-    console.log(length);
+    labels2 = [];
+    values2 = [];
 
-    labels = [];
-    values = [];
-    for (i = 0; i < length; i++) {
-        labels.push(data[i].imie);
-        values.push(data[i].wiek);
+    for (i = 0; i < x; i++) {
+        labels2.push(data[i].imie);
+        values2.push(data[i].wiek);
     }
     new Chart(document.getElementById("line-chart"), {
 
@@ -116,11 +96,11 @@ async function getData3() {
 
         type: 'line',
         data: {
-            labels: labels,
+            labels: labels2,
             datasets: [{
                 label: "wiek",
                 backgroundColor: "#4A4E69",
-                data: values
+                data: values2
 
             }]
         },

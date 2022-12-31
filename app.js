@@ -44,7 +44,7 @@ async function getData(x) {
 
     labels = [];
     values = [];
-    for (i = 0; i < length; i++) {
+    for (i = 0; i < x; i++) {
         labels.push(data[i].pseudonim);
         values.push(data[i].wygrane_partie);
     }
@@ -80,9 +80,12 @@ async function getData(x) {
         }
     });
 
-    for (i = 0; i < length; i++) {
-        labels.push(data[i].imie);
-        values.push(data[i].wiek);
+    labels2 = [];
+    values2 = [];
+
+    for (i = 0; i < x; i++) {
+        labels2.push(data[i].imie);
+        values2.push(data[i].wiek);
     }
     new Chart(document.getElementById("line-chart"), {
 
@@ -93,11 +96,11 @@ async function getData(x) {
 
         type: 'line',
         data: {
-            labels: labels,
+            labels: labels2,
             datasets: [{
                 label: "wiek",
                 backgroundColor: "#4A4E69",
-                data: values
+                data: values2
 
             }]
         },
