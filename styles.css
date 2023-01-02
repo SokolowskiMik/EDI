@@ -209,8 +209,8 @@ h2 {
     text-align: center;
     margin: auto;
     margin-top: 60px;
-    width: 46%;
     margin-bottom: 150px;
+    width: 46%;
 }
 
 .hero-2 {
@@ -229,10 +229,10 @@ h2 {
 }
 
 footer {
-    position: absolute;
+    position: relative;
+    width: 75%;
     bottom: 0;
-    left: 5px;
-    right: 5px;
+    margin: auto;
     margin-top: 30px;
     background-color: var(--bg-1);
     color: var(--font-1);
