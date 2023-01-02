@@ -155,11 +155,12 @@ nav>ul {
 .table {
     overflow:hidden;
     overflow-y: scroll;
-    height:400px;
+    max-height: 400px;
+    width: auto;
+    max-width: 1200px;
     display:block;
 
     text-align: center;
-    width: 70%;
     
     margin: auto;
     margin-top: 60px;
