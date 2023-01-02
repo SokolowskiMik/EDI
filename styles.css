@@ -42,6 +42,7 @@ a {
     color: inherit;
     text-decoration: none;
     padding: 20px;
+    transition: color ease-in-out 500ms;
 }
 
 a:hover {
