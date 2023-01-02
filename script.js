@@ -17,12 +17,15 @@ let colors = [
 
 let randomColor = []
 
+
 for (let i = 0; i < 100; i++) {
     let index = Math.floor(Math.random() * colors.length);
     randomColor.push(colors[index])
 }
 
 async function getData(x) {
+
+    
 
     const response = await fetch(apiUrl);
     const data = await response.json();

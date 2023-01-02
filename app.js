@@ -3,9 +3,12 @@ const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
 
 
 async function no_elements() {
-    let number = parseInt(prompt("How many results:"));
-    getData(number);
+    let number = prompt("How many results (max:100):");
+    if(number.isInteger()){
+        getData(number);
+    }
 }
+   
 
 let colors = [
     "#22223B",

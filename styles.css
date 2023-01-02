@@ -150,26 +150,23 @@ nav>ul {
     
 }
 
-.t-container {
-    left: 20px;
-    right: 20px;
-}
+
 
 .table {
+    overflow:hidden;
+    overflow-y: scroll;
+    height:400px;
+    display:block;
+
     text-align: center;
-    width: 90%;
+    width: 70%;
+    
     margin: auto;
     margin-top: 60px;
+
     background-color: var(--bg-2);
     border-color: var(--bg-1);
     color: var(--font-1);
-}
-
-.table-style {
-    color: var(--font-1);
-    background-color: var(--bg-2);
-    left: 5px;
-    right: 5px;
 }
 
 .mt-3 {
