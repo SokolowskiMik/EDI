@@ -140,9 +140,14 @@ nav>ul {
 }
 
 @media (max-width: 650px) {
-    nav>ul {
-        flex-direction: column;
+    header {
+        position: relative;
+        top: 0
     }
+    nav>ul {
+        flex-direction: row;
+    }
+    
 }
 
 .t-container {
@@ -209,7 +214,7 @@ h2 {
     text-align: center;
     margin: auto;
     margin-top: 60px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     width: 46%;
 }
 
