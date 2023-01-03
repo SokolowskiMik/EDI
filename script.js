@@ -1,5 +1,5 @@
-const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
-// const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=25ccbe90';
+// const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
+const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=25ccbe90';
 
 
 // pokazanie wybranej ilosci danych
@@ -45,22 +45,42 @@ async function getData(x) {
     document.getElementById('zawodnicy').innerHTML = table
 
     // tworzenie dancyh do wykrsów 
-    labels = [];
-    values = [];
+
+    labels1 = [];
+    values1 = [];
+
+    labels2 = [];
+    values2 = [];
+
+    labels3 = [];
+    values3 = [];
+
+    labels4 = [];
+    values4 = [];
+
     for (i = 0; i < x; i++) {
-        labels.push(data[i].pseudonim);
-        values.push(data[i].wygrane_partie);
+        labels1.push(data[i].pseudonim);
+        values1.push(data[i].wygrane_partie);
+
+        labels2.push(data[i].pseudonim);
+        values2.push(data[i].przegrane_partie);
+
+        labels3.push(data[i].pseudonim);
+        values3.push(data[i].plec);
+
+        labels4.push(data[i].pseudonim);
+        values4.push(data[i].wiek);
     }
 
     // ustawienia wykresu slupkowego
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
-            labels: labels,
+            labels: labels1,
             datasets: [{
                 label: "wygrane partie",
                 backgroundColor: randomColor,
-                data: values,
+                data: values1,
                 borderColor: "black",
                 borderWidth: 1
             }]
@@ -94,7 +114,6 @@ async function getData(x) {
     // Ustawienia wykresu liniowego
     new Chart(document.getElementById("line-chart"), {
 
-
         options: {
 
             layout: { padding: 10 },
@@ -122,16 +141,19 @@ async function getData(x) {
 
         type: 'line',
         data: {
-            labels: labels,
+            labels: labels2,
             datasets: [{
-                label: "wiek",
+                label: "przegrane partie",
                 backgroundColor: "#4A4E69",
-                data: values
+                data: values2
 
                 
 
             }]
         },
     });
+
+
+
 
 }
