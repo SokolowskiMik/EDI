@@ -2,11 +2,13 @@ const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
 // const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=25ccbe90';
 
 
+// pokazanie wybranej ilosci danych
 async function no_elements() {
     let number = parseInt(prompt("How many results (out of 100)?")); 
     getData(number);
 }
 
+// kolory
 let colors = [
     "#22223B",
     "#4A4E69",
@@ -15,34 +17,34 @@ let colors = [
     "#F2E9E4"
 ]
 
+// genruje liste kolorow w losowej kolejnosci
 let randomColor = []
-
-
 for (let i = 0; i < 100; i++) {
     let index = Math.floor(Math.random() * colors.length);
     randomColor.push(colors[index])
 }
 
+// wyswietlenie Tabeli oraz wykresów
 async function getData(x) {
 
+    // pobranie danych
     const response = await fetch(apiUrl);
     const data = await response.json();
 
+    // tworzenie tabeli
     let table = '<table><tr><th>Ranking</th><th>Imie</th><th>Nazwisko</th><th>Plec</th><th>Pochodzenie</th><th>Wiek</th><th>Pseudonim</th><th>Wygrane partie</th><th>Przegrane partie</th></tr>';
-
     for (let i = 0; i < x; i++) {
         const item = data[i];
         if (item) {
             table += `<tr><td>${item.ranking}</td><td>${item.imie}</td><td>${item.nazwisko}</td><td>${item.plec}</td><td>${item.pochodzenie}</td><td>${item.wiek}</td><td>${item.pseudonim}</td><td>${item.wygrane_partie}</td><td>${item.przegrane_partie}</td></tr>`;
         }
     }
-
     table += '</table>';
 
+    // przekazanie tabeli
     document.getElementById('zawodnicy').innerHTML = table
 
-    length = data.length;
-
+    // tworzenie dancyh do wykrsów 
     labels = [];
     values = [];
     for (i = 0; i < x; i++) {
@@ -50,7 +52,7 @@ async function getData(x) {
         values.push(data[i].wygrane_partie);
     }
 
-    // bar (first) chart
+    // ustawienia wykresu slupkowego
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
@@ -89,16 +91,7 @@ async function getData(x) {
     });
     
 
-    labels2 = [];
-    values2 = [];
-
-    for (i = 0; i < x; i++) {
-        labels2.push(data[i].imie);
-        values2.push(data[i].wiek);
-    }
-
-
-    // line (second) chart
+    // Ustawienia wykresu liniowego
     new Chart(document.getElementById("line-chart"), {
 
 
@@ -129,11 +122,11 @@ async function getData(x) {
 
         type: 'line',
         data: {
-            labels: labels2,
+            labels: labels,
             datasets: [{
                 label: "wiek",
                 backgroundColor: "#4A4E69",
-                data: values2
+                data: values
 
                 
 
