@@ -25,8 +25,6 @@ for (let i = 0; i < 100; i++) {
 
 async function getData(x) {
 
-
-
     const response = await fetch(apiUrl);
     const data = await response.json();
 
@@ -69,24 +67,24 @@ async function getData(x) {
                 display: false,
                 labels: {
                     font: {
-                        fontColor: "white"
+                        fontColor: "#f8f9fa"
                     }
                 }
             },
             title: {
                 display: true,
                 text: 'Wygrane Partie',
-                fontColor: "white",
+                fontColor: "#f8f9fa",
             },
             scales: {
                 xAxes: [{
                     ticks: {
-                        fontColor: "white"
+                        fontColor: "#f8f9fa"
                     }
                 }],
                 yAxes: [{
                     ticks: {
-                        fontColor: "white"
+                        fontColor: "#f8f9fa"
                     }
                 }]
             }
@@ -105,6 +103,12 @@ async function getData(x) {
 
 
         options: {
+
+            legend: {
+
+                fontColor: "#f8f9fa"
+
+            },
             layout: { padding: 10 },
 
             legend: {
@@ -116,12 +120,12 @@ async function getData(x) {
             scales: {
                 xAxes: [{
                     ticks: {
-                        fontColor: "white"
+                        fontColor: "#f8f9fa"
                     }
                 }],
                 yAxes: [{
                     ticks: {
-                        fontColor: "white"
+                        fontColor: "#f8f9fa"
                     }
                 }]
             }
