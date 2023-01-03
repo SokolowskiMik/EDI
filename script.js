@@ -3,7 +3,7 @@ const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
 
 
 async function no_elements() {
-    let number = parseInt(prompt("How many results:"));
+    let number = parseInt(prompt("How many results (out of 100)?"));
     getData(number);
 }
 
