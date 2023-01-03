@@ -171,8 +171,8 @@ nav>ul {
 
 .btn {
     padding: 0 20px;
-    width: 25%;
-    height: 40px;
+    width: 30%;
+    height: auto 40px;
     font-size: 1em;
     font-weight: 900;
     text-transform: uppercase;

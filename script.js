@@ -86,8 +86,7 @@ async function getData(x) {
     // przekazanie tabeli
     document.getElementById('zawodnicy').innerHTML = table
 
-    // tworzenie dancyh do wykrsów 
-
+    // tworzenie dancyh do wykresów 
     labels1 = [];
     values1 = [];
 
@@ -111,7 +110,7 @@ async function getData(x) {
     }
 
 
-    // ustawienia wykresu slupkowego
+    // wykres slupkowy
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
@@ -149,7 +148,7 @@ async function getData(x) {
         }
     });
     
-    // Ustawienia wykresu liniowego
+    // wykres liniowy
     new Chart(document.getElementById("line-chart"), {
 
         options: {
