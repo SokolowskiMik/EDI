@@ -28,6 +28,8 @@ body {
 
 #page-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -49,34 +51,6 @@ a:hover {
     color: var(--font-3);
 }
 
-.container2 {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-
-.container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.btn {
-    padding: 0 20px;
-    height: 40px;
-    font-size: 1em;
-    font-weight: 900;
-    text-transform: uppercase;
-    border: 3px var(--bg-1) solid;
-    color: var(--font-2);
-    background: transparent;
-    cursor: pointer;
-}
-
-.grid {
-    display: flex;
-}
 
 header {
     position: fixed;
@@ -151,6 +125,40 @@ nav>ul {
     
 }
 
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container3 {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+
+.btn {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 3px var(--bg-1) solid;
+    color: var(--font-2);
+    background: transparent;
+    cursor: pointer;
+}
 
 
 .table {
@@ -236,14 +244,13 @@ footer {
     position: relative;
     width: 75%;
     bottom: 0;
-    margin: auto;
-    margin-top: 30px;
     background-color: var(--bg-1);
     color: var(--font-1);
     padding: 20px;
-    margin-bottom: 10px;
     border-radius: 7px;
+    margin: 0 auto;
 }
+
 
 footer>ul {
     display: flex;

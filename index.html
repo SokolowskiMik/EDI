@@ -11,50 +11,50 @@
   </head>
   <body>
     <div id="page-wrapper">
-      <header id="header">
-        <div class="logo">
-            <i class="fas fa-database fa-beat-fade" style="color: white; --fa-animation-duration:9s;"> EDI Group Project</i> 
-        </div>
+        <header id="header">
+          <div class="logo">
+              <i class="fas fa-database fa-beat-fade" style="color: white; --fa-animation-duration:9s;"> EDI Group Project</i> 
+          </div>
 
-        <nav id="nav-bar">
-          <ul>
-            <li><a class="nav-link" href="https://github.com/DominikGraczek" target="blank_"><i class="fa fa-github" style="font-size:17px"></i> Dominik Graczek</a></li>
-            <li><a class="nav-link" href="https://github.com/anoniarz" target="blank_"><i class="fa fa-github" style="font-size:17px"></i> Filip Dzięgło</a></li>
-            <li><a class="nav-link" href="https://github.com/SokolowskiMik" target="blank_"><i class="fa fa-github" style="font-size:17px"></i> Mikołaj Sokołowski</a></li>
-          </ul>
-        </nav>
-      </header>
+          <nav id="nav-bar">
+            <ul>
+              <li><a class="nav-link" href="https://github.com/DominikGraczek" target="blank_"><i class="fa fa-github" style="font-size:17px"></i> Dominik Graczek</a></li>
+              <li><a class="nav-link" href="https://github.com/anoniarz" target="blank_"><i class="fa fa-github" style="font-size:17px"></i> Filip Dzięgło</a></li>
+              <li><a class="nav-link" href="https://github.com/SokolowskiMik" target="blank_"><i class="fa fa-github" style="font-size:17px"></i> Mikołaj Sokołowski</a></li>
+            </ul>
+          </nav>
+        </header>
 
-      <div class="container"></div>
+        <div class="container"></div>
 
-      <section id="hero">
-        <h2>Mocaroo API</h2>
-        <div class="container mt-3">
-          <button class="btn btn-secondary" id="show-table" onclick="no_elements()">Show #</button>
-          <button class="btn btn-secondary" id="show-table" onclick="getData(100)">Show all</button>
-        </div>
+        <section id="hero">
+          <h2>Mocaroo API</h2>
+          <div class="container mt-3">
+            <button class="btn btn-secondary" id="show-table" onclick="no_elements()">Show #</button>
+            <button class="btn btn-secondary" id="show-table" onclick="getData(100)">Show all</button>
+          </div>
+          
+        </section>
+
         
-      </section>
+        <table class="table table-bordered table-dark" id="zawodnicy" display="none">
+        </table>
 
       
-      <table class="table table-bordered table-dark" id="zawodnicy" display="none">
-      </table>
 
-    
+      <div class="container2">
+        <section id="hero3">
+          <h2>BAR CHART</h2>
+          <canvas id="bar-chart" width="20" height="10"></canvas>
+        </section>
 
-    <div class="container2">
-      <section id="hero3">
-        <h2>BAR CHART</h2>
-        <canvas id="bar-chart" width="20" height="10"></canvas>
-      </section>
+        <section id="hero3">
+          <h2>LINE CHART</h2>
+          <canvas id="line-chart" width="20" height="10"></canvas> 
+        </section>
+      </div>
 
-      <section id="hero3">
-        <h2>LINE CHART</h2>
-        <canvas id="line-chart" width="20" height="10"></canvas> 
-      </section>
-    </div>
-
-      <div class="container">
+      <div class="container3">
         <footer>
           <ul>
             <li><a href="#">Contact</a></li>
@@ -62,7 +62,8 @@
           <span>Copyright 2022</span>
         </footer>
       </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </div>
   </body>
 </html>
