@@ -64,18 +64,13 @@ async function getData(x) {
         options: {
             layout: { padding: 10 },
             legend: {
-                display: false,
+                display: true,
                 labels: {
-                    font: {
+                        fontSize: 14,
                         fontColor: "#f8f9fa"
-                    }
                 }
             },
-            title: {
-                display: true,
-                text: 'Wygrane Partie',
-                fontColor: "#f8f9fa",
-            },
+
             scales: {
                 xAxes: [{
                     ticks: {
@@ -104,17 +99,12 @@ async function getData(x) {
 
         options: {
 
-            legend: {
-
-                fontColor: "#f8f9fa"
-
-            },
             layout: { padding: 10 },
 
             legend: {
                 labels: {
-                    fontColor: "white",
-                    fontSize: 18
+                    fontColor: "#f8f9fa",
+                    fontSize: 14,
                 }
             },
             scales: {
