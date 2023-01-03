@@ -64,12 +64,6 @@ async function getData(x) {
 
         labels2.push(data[i].pseudonim);
         values2.push(data[i].przegrane_partie);
-
-        labels3.push(data[i].pseudonim);
-        values3.push(data[i].plec);
-
-        labels4.push(data[i].pseudonim);
-        values4.push(data[i].wiek);
     }
 
     // ustawienia wykresu slupkowego
@@ -152,8 +146,5 @@ async function getData(x) {
             }]
         },
     });
-
-
-
 
 }
