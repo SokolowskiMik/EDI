@@ -161,12 +161,28 @@ nav>ul {
 }
 
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-2); 
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--font-2); 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--font-1); 
+  }
+
 .table {
 
 
     overflow:hidden;
     overflow-y: scroll;
-    max-height: 400px;
+    max-height: 394px;
     width: auto;
     max-width: 1200px;
     display:block;
