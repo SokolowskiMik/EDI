@@ -178,6 +178,12 @@ nav>ul {
     background: var(--font-1); 
   }
 
+th {
+    border-radius: 0;
+    background-color: var(--bg-1) ;
+}
+
+
 .table {
 
 
