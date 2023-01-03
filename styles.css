@@ -16,6 +16,7 @@
 }
 
 body {
+
     background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
     background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
     background: -ms-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -ms-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
@@ -138,7 +139,7 @@ nav>ul {
   }
   
   .container3 {
-    max-width: 1000px;
+
     width: 100%;
     margin: auto;
     margin-bottom: 0;
@@ -179,8 +180,11 @@ nav>ul {
   }
 
 th {
+    position: sticky;
+    top: 0px;
     border-radius: 0;
     background-color: var(--bg-1) ;
+    
 }
 
 
@@ -272,13 +276,14 @@ h2 {
 
 footer {
     position: relative;
-    width: 75%;
+    width: 90%;
     bottom: 0;
     background-color: var(--bg-1);
     color: var(--font-1);
     padding: 20px;
     border-radius: 7px;
     margin: 0 auto;
+
 }
 
 

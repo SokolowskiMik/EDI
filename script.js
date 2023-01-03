@@ -3,7 +3,7 @@ const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
 
 
 async function no_elements() {
-    let number = parseInt(prompt("How many results (out of 100)?"));
+    let number = parseInt(prompt("How many results (out of 100)?")); 
     getData(number);
 }
 
@@ -25,7 +25,7 @@ for (let i = 0; i < 100; i++) {
 
 async function getData(x) {
 
-    
+
 
     const response = await fetch(apiUrl);
     const data = await response.json();
@@ -64,7 +64,6 @@ async function getData(x) {
             }]
         },
         options: {
-
             layout: { padding: 10 },
             legend: {
                 display: false,
@@ -78,10 +77,22 @@ async function getData(x) {
                 display: true,
                 text: 'Wygrane Partie',
                 fontColor: "white",
-
+            },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        fontColor: "white"
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        fontColor: "white"
+                    }
+                }]
             }
         }
     });
+    
 
     labels2 = [];
     values2 = [];
@@ -95,6 +106,20 @@ async function getData(x) {
 
         options: {
             layout: { padding: 10 },
+
+            scales: {
+                xAxes: [{
+                    ticks: {
+                        fontColor: "white"
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        fontColor: "white"
+                    }
+                }]
+            }
+
         },
 
         type: 'line',
@@ -104,6 +129,8 @@ async function getData(x) {
                 label: "wiek",
                 backgroundColor: "#4A4E69",
                 data: values2
+
+                
 
             }]
         },
