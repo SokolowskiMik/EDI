@@ -107,6 +107,12 @@ async function getData(x) {
         options: {
             layout: { padding: 10 },
 
+            legend: {
+                labels: {
+                    fontColor: "white",
+                    fontSize: 18
+                }
+            },
             scales: {
                 xAxes: [{
                     ticks: {

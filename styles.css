@@ -1,4 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+/* reset box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,8 @@
     font-family: 'Lato', sans-serif;
 }
 
+
+/* Font colors */
 :root {
     --font-1: #f8f9fa;
     --font-2: #ced4da;
@@ -15,8 +19,9 @@
     --bg-2: #6c757d;
 }
 
-body {
 
+/* apply background styling and font type */
+body {
     background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
     background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
     background: -ms-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -ms-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
@@ -27,12 +32,16 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
+/* set page display */
 #page-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
+
+/* list, i and a styling */
 li {
     list-style: none;
 }
@@ -53,6 +62,7 @@ a:hover {
 }
 
 
+/* header and nav styling */
 header {
     position: fixed;
     top: 0;
@@ -125,7 +135,10 @@ nav>ul {
     }
     
 }
+/* end of header and nav styling */
 
+
+/* classes styling */
 .container {
     max-width: 1000px;
     width: 100%;
@@ -162,7 +175,7 @@ nav>ul {
     cursor: pointer;
 }
 
-
+/* scrollbar styling */
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -179,6 +192,8 @@ nav>ul {
     background: var(--font-1); 
   }
 
+
+/* table styling */
 th {
     position: sticky;
     top: 0px;
@@ -222,6 +237,8 @@ h2 {
     color: var(--font-2);
 }
 
+
+/* ids styling */
 #hero {
     background-color: var(--bg-2);
     display: flex;
@@ -234,19 +251,18 @@ h2 {
     width: 50%;
 }
 
-#hero2 {
-    background-color: var(--bg-2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    margin-top: 60px;
-    width: 50%;
+#hero>h2 {
+    margin-bottom: 20px;
+    word-wrap: break-word;
 }
 
-#hero3 {
+@media (max-width: 650px) {
+    #hero {
+        margin-top: 120px;
+    }
+}
+
+#hero2 {
     background-color: var(--bg-2);
     display: flex;
     flex-direction: column;
@@ -263,17 +279,7 @@ h2 {
     margin-top: 60px;
 }
 
-#hero>h2 {
-    margin-bottom: 20px;
-    word-wrap: break-word;
-}
-
-@media (max-width: 650px) {
-    #hero {
-        margin-top: 120px;
-    }
-}
-
+/* footer styling */
 footer {
     position: relative;
     width: 90%;
