@@ -152,6 +152,7 @@ nav>ul {
 
 /* container for charts  */
 .container2 {
+
     display: flex;
     justify-content: space-between;
   }
