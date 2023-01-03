@@ -139,6 +139,9 @@ nav>ul {
 
 
 /* classes styling */
+
+
+/* container for buttons  */
 .container {
     max-width: 1000px;
     width: 100%;
@@ -146,12 +149,15 @@ nav>ul {
     text-align: center;
 }
 
+
+/* container for charts  */
 .container2 {
     display: flex;
     justify-content: space-between;
   }
-  
-  .container3 {
+
+/* container for footer  */
+.container3 {
 
     width: 100%;
     margin: auto;
@@ -194,6 +200,8 @@ nav>ul {
 
 
 /* table styling */
+
+/* table heading */
 th {
     position: sticky;
     top: 0px;
@@ -202,22 +210,17 @@ th {
     
 }
 
-
+/* table class */
 .table {
-
-
     overflow:hidden;
     overflow-y: scroll;
     max-height: 394px;
     width: auto;
     max-width: 1200px;
     display:block;
-
     text-align: center;
-    
     margin: auto;
     margin-top: 60px;
-
     background-color: var(--bg-2);
     border-color: var(--bg-1);
     color: var(--font-1);
@@ -232,13 +235,15 @@ th {
     
 }
 
+
+/* heading styling*/
 h2 {
     margin-top: 10px;
     color: var(--font-2);
 }
 
 
-/* ids styling */
+/* mockaroo data styling */
 #hero {
     background-color: var(--bg-2);
     display: flex;
@@ -263,7 +268,7 @@ h2 {
 }
 
 
-/* */
+/* charts styling */
 #hero2 {
     background-color: var(--bg-2);
     display: flex;

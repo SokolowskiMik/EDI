@@ -49,6 +49,8 @@ async function getData(x) {
         labels.push(data[i].pseudonim);
         values.push(data[i].wygrane_partie);
     }
+
+    // bar (first) chart
     new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
@@ -94,6 +96,9 @@ async function getData(x) {
         labels2.push(data[i].imie);
         values2.push(data[i].wiek);
     }
+
+
+    // line (second) chart
     new Chart(document.getElementById("line-chart"), {
 
 
