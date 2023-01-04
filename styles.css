@@ -217,7 +217,7 @@ th {
     overflow-y: scroll;
     max-height: 394px;
     width: auto;
-    max-width: 1200px;
+    max-width: 1300px;
     display:block;
     text-align: center;
     margin: auto;
@@ -279,7 +279,7 @@ h2 {
     text-align: center;
     margin: auto;
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     width: 46%;
 }
 
@@ -297,6 +297,7 @@ footer {
     padding: 20px;
     border-radius: 7px;
     margin: 0 auto;
+    margin-top: 60px;
 
 }
 
