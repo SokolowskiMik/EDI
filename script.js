@@ -10,7 +10,7 @@ async function no_elements() {
 
 // zamienia liste w slownik
 function counter(arr) {
-    const count = {"male": 0, "female": 0};
+    const count = {"Male": 0, "Female": 0};
     arr.forEach(item => {
       if (item in count) {
         count[item] += 1;
