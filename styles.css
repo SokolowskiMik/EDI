@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
 /* reset box-sizing */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@
 
 
 /* Font colors */
+
 :root {
     --font-1: #f8f9fa;
     --font-2: #ced4da;
@@ -21,6 +23,7 @@
 
 
 /* apply background styling and font type */
+
 body {
     background: -moz-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -moz-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
     background: -webkit-radial-gradient(0% 2%, circle, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), -webkit-radial-gradient(100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px), none;
@@ -29,11 +32,12 @@ body {
     background-size: 20px 20px;
     background-color: #444;
     font-family: 'Lato', sans-serif;
-    
+    z-index: 1;
 }
 
 
 /* set page display */
+
 #page-wrapper {
     position: relative;
     display: flex;
@@ -42,6 +46,7 @@ body {
 
 
 /* list, i and a styling */
+
 li {
     list-style: none;
 }
@@ -63,7 +68,9 @@ a:hover {
 
 
 /* header and nav styling */
+
 header {
+    z-index: 2;
     position: fixed;
     top: 0;
     right: 5px;
@@ -133,8 +140,9 @@ nav>ul {
     nav>ul {
         flex-direction: row;
     }
-    
 }
+
+
 /* end of header and nav styling */
 
 
@@ -142,6 +150,7 @@ nav>ul {
 
 
 /* container for buttons  */
+
 .container {
     max-width: 1000px;
     width: 100%;
@@ -151,15 +160,16 @@ nav>ul {
 
 
 /* container for charts  */
-.container2 {
 
+.container2 {
     display: flex;
     justify-content: space-between;
-  }
+}
+
 
 /* container for footer  */
-.container3 {
 
+.container3 {
     width: 100%;
     margin: auto;
     margin-bottom: 0;
@@ -167,7 +177,6 @@ nav>ul {
     position: relative;
     bottom: 0;
 }
-
 
 .btn {
     padding: 0 20px;
@@ -182,43 +191,48 @@ nav>ul {
     cursor: pointer;
 }
 
+
 /* scrollbar styling */
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
-  ::-webkit-scrollbar-track {
-    background: var(--bg-2); 
-  }
+ ::-webkit-scrollbar-track {
+    background: var(--bg-2);
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: var(--font-2); 
-  }
+ ::-webkit-scrollbar-thumb {
+    background: var(--font-2);
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--font-1); 
-  }
+ ::-webkit-scrollbar-thumb:hover {
+    background: var(--font-1);
+}
 
 
 /* table styling */
 
+
 /* table heading */
+
 th {
     position: sticky;
     top: 0px;
     border-radius: 0;
-    background-color: var(--bg-1) ;
-    
+    background-color: var(--bg-1);
 }
 
+
 /* table class */
+
 .table {
-    overflow:hidden;
+    overflow: hidden;
     overflow-y: scroll;
     max-height: 394px;
     width: auto;
     max-width: 1300px;
-    display:block;
+    display: block;
     text-align: center;
     margin: auto;
     margin-top: 60px;
@@ -233,11 +247,11 @@ th {
     justify-content: space-evenly;
     margin: 10px;
     padding-bottom: 20px;
-    
 }
 
 
 /* heading styling*/
+
 h2 {
     margin-top: 10px;
     color: var(--font-2);
@@ -245,6 +259,7 @@ h2 {
 
 
 /* mockaroo data styling */
+
 #hero {
     background-color: var(--bg-2);
     display: flex;
@@ -270,6 +285,7 @@ h2 {
 
 
 /* charts styling */
+
 #hero2 {
     background-color: var(--bg-2);
     display: flex;
@@ -287,7 +303,9 @@ h2 {
     margin-top: 60px;
 }
 
+
 /* footer styling */
+
 footer {
     position: relative;
     width: 90%;
@@ -298,9 +316,7 @@ footer {
     border-radius: 7px;
     margin: 0 auto;
     margin-top: 40px;
-
 }
-
 
 footer>ul {
     display: flex;
