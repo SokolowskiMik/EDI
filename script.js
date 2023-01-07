@@ -171,12 +171,9 @@ async function getData(x) {
         data: {
             labels: labels2,
             datasets: [{
-                label: "przegrane partie",
+                label: "Games Lost",
                 backgroundColor: "#4A4E69",
                 data: values2
-
-
-
             }]
         },
     });
