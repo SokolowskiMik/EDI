@@ -11,7 +11,7 @@
     <title>EDI Project</title>
   </head>
   <body>
-    <script>getData(0)</script>
+    <script>getData(100, 'data1.json')</script>
     <div id="page-wrapper">
         <header id="header">
           <div class="logo">
@@ -32,8 +32,13 @@
         <section id="hero">
           <h2>DATA OF YENGA PLAYERS FROM MOCAROO</h2>
           <div class="container mt-3">
-            <button class="btn btn-secondary btn-lg" id="show-table" onclick="no_elements()">Generate #</button>
-            <button class="btn btn-secondary btn-lg" id="show-table" onclick="getData(100)">Generate 100</button>
+            <button class="btn btn-secondary btn-lg" onclick="no_elements()">Generate #</button>
+            <button class="btn btn-secondary btn-lg" onclick="getData(100, apiUrl)">Generate 100</button>
+        </div>
+          <div class="container mt-3">
+            <button class="btn btn-secondary btn-lg" onclick="getData(100, 'data1.json')">Show 1st set</button>
+            <button class="btn btn-secondary btn-lg" onclick="getData(100, 'data2.json')">Show 2nd set</button>
+            <button class="btn btn-secondary btn-lg" onclick="getData(100, 'data3.json')">Show 3rd set</button>
           </div>
         </section>
         <table class="table table-bordered table-dark" id="zawodnicy" display="none">

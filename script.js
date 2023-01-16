@@ -5,7 +5,7 @@ const apiUrl = 'https://my.api.mockaroo.com/yenga.json?key=72109a80';
 // pokazanie wybranej ilosci danych
 async function no_elements() {
     let number = parseInt(prompt("How many results (out of 100)?"));
-    getData(number);
+    getData(number, apiUrl);
 }
 
 // zamienia liste w slownik
@@ -67,11 +67,11 @@ for (let i = 0; i < 100; i++) {
     randomColor.push(colors[index])
 }
 
-// wyswietlenie Tabeli oraz wykresów
-async function getData(x) {
 
+// wyswietlenie Tabeli oraz wykresów
+async function getData(x, y) {
     // pobranie danych
-    const response = await fetch(apiUrl);
+    const response = await fetch(y);
     const data = await response.json();
 
     // tworzenie tabeli
@@ -146,9 +146,9 @@ async function getData(x) {
             }
         },
     }
-
+    
     // wykres slupkowy
-    new Chart(document.getElementById("bar-chart"), {
+    Chart1 = new Chart(document.getElementById("bar-chart"), {
         type: 'bar',
         data: {
             labels: labels1,
@@ -162,6 +162,8 @@ async function getData(x) {
         },
         options: options1,
     });
+    
+    
 
     // wykres liniowy
     new Chart(document.getElementById("line-chart"), {
@@ -221,4 +223,5 @@ async function getData(x) {
             }]
         },
     });
+    
 }
